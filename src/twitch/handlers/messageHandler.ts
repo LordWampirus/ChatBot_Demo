@@ -3,6 +3,7 @@ import { commands, loadTwitchCommands } from "./commandLoader";
 import { handleInsufficientPermission } from "./insufficientPermission";
 import { handleUnknownCommand } from "./unknownCommand";
 import { cooldownService } from "../../services/CooldownService";
+import { Logger } from "../../logger/logger";
 
 import type { TwitchMessageInput } from "../../types/twitch";
 
@@ -24,9 +25,13 @@ export function handleTwitchMessage({client, channel, user, message,}: TwitchMes
     const commandName = args.shift()?.toLowerCase();
     const command = commandName ? commands.get(commandName) : undefined;
 
-    /*
-
-    */
+    Logger.log({
+        platform: platform,
+        user: user["display-name"] ?? "UNKNOWN_USER",
+        command: commandName ?? "UNKNOWN_COMMAND",
+        args,
+        channel,
+    });
 
     if(!command) {
         handleUnknownCommand({client, channel});
@@ -59,9 +64,14 @@ export function handleTwitchMessage({client, channel, user, message,}: TwitchMes
         command.run(client, channel, user, args);
     } catch (err) {
         console.error(err);
-        /*
-
-        */
+        Logger.log({
+            level: "ERROR",
+            platform: platform,
+            user: user["display-name"] ?? "UNKNOWN_USER",
+            command: commandName ?? "UNKNOWN_COMMAND",
+            channel,
+            error: err,
+        });
        client.say(channel, `⚠️ Nastala chyba při vykonávání příkazu.`);
     }
 }
