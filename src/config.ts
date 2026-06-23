@@ -11,10 +11,10 @@ export enum CooldownTime {
 }
 
 export enum DiscordServerID {
-    MY_DiscordServer = "611967911896154263",
+    MY_DiscordServer = "serverId",
 }
 
 export enum DiscordChannelID {
-    STREAMCHAT = "1453854083755675710",
-    ADMIN = "636237324136480797",
+    STREAMCHAT = "channelId_for_messages_from_twitch",
+    ADMIN = "adminRoomId",
 }
