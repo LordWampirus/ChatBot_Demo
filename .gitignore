@@ -5,6 +5,10 @@ node_modules/
 logs/
 *.log
 
+# Archives
+archives/
+*.log
+
 # Build / TypeScript
 dist/
 *.tsbuildinfo
