@@ -4,9 +4,8 @@ import { handleInsufficientPermission } from "./insufficientPermission";
 import { handleUnknownCommand } from "./unknownCommand";
 import { cooldownService } from "../../services/CooldownService";
 import { Logger } from "../../logger/logger";
-
-import type { TwitchMessageInput } from "../../types/twitch";
 import { sendToDiscord } from "../../core/bridge";
+import type { TwitchMessageInput } from "../../types/twitch";
 
 loadTwitchCommands();
 
