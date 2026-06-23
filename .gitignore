@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Build / TypeScript
+dist/
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# VS Code
+.vscode
