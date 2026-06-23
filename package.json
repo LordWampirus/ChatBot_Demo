@@ -1,5 +1,5 @@
 {
-  "name": "chatbot_demo",
+  "name": "krvesajka_bot_demo",
   "version": "1.0.0",
   "description": "Discord & Twitch bot demonstration",
   "main": "src/index.ts",
@@ -18,7 +18,6 @@
   "dependencies": {
     "discord.js": "^14.23.2",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1",
     "tmi.js": "^1.8.5"
   }
 }
