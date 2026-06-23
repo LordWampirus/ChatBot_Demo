@@ -38,6 +38,7 @@ Projekt ukazuje základní práci s Discord botem, Twitch chat botem, příkazov
 
 ## Struktura projektu
 
+```txt
 src/
   core/
     bridge.ts
@@ -90,6 +91,7 @@ src/
 
   config.ts
   index.ts
+```
 
 ---
 
@@ -148,11 +150,13 @@ Projekt používá `.env` soubor pro citlivé údaje a konfiguraci.
 
 V repozitáři je připravený soubor `.env.example`:
 
+```txt
 DISCORD_TOKEN=My_Token
 
 TWITCH_TOKEN=oauth:My_Token
 TWITCH_BOT_USERNAME=Bot_Username
 TWITCH_CHANNELS=My_Channel
+```
 
 Pro spuštění projektu je potřeba vytvořit vlastní `.env` soubor podle `.env.example` a doplnit skutečné hodnoty tokenů.
 
